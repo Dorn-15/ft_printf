@@ -6,13 +6,13 @@
 /*   By: adoireau <adoireau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:51:51 by adoireau          #+#    #+#             */
-/*   Updated: 2024/10/28 13:16:49 by adoireau         ###   ########.fr       */
+/*   Updated: 2024/11/18 11:50:43 by adoireau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	ft_putnbr(int n)
+void	ft_putnbr(int n)
 {
 	if (n >= 10)
 		ft_putnbr(n / 10);

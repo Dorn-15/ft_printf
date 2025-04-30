@@ -6,7 +6,7 @@
 /*   By: adoireau <adoireau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 14:22:55 by adoireau          #+#    #+#             */
-/*   Updated: 2024/10/09 12:51:01 by adoireau         ###   ########.fr       */
+/*   Updated: 2024/11/11 16:20:41 by adoireau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static size_t	count_words(char const *s, char c)
 {
 	size_t	i;
 	size_t	words;
-	int		in_word;
+	size_t	in_word;
 
 	i = 0;
 	words = 0;
@@ -36,16 +36,6 @@ static size_t	count_words(char const *s, char c)
 	return (words);
 }
 
-void	free_all(char **tab, size_t index)
-{
-	while (index > 0)
-	{
-		index--;
-		free(tab[index]);
-	}
-	free(tab);
-}
-
 char	*allocate_word(const char *s, size_t start, size_t end)
 {
 	char	*word;
@@ -56,11 +46,7 @@ char	*allocate_word(const char *s, size_t start, size_t end)
 		return (NULL);
 	i = 0;
 	while (start < end)
-	{
-		word[i] = s[start];
-		i++;
-		start++;
-	}
+		word[i++] = s[start++];
 	word[i] = '\0';
 	return (word);
 }
@@ -81,17 +67,25 @@ int	allocate_tab(char const *s, char c, char **tab)
 			while (s[i] && s[i] != c)
 				i++;
 			tab[index] = allocate_word(s, j, i);
-			if (!tab[index])
-			{
-				free_all(tab, index);
+			if (tab[index] == NULL)
 				return (0);
-			}
+			if (!s[i])
+				break ;
 			index++;
 		}
 		i++;
 	}
-	tab[index] = NULL;
 	return (1);
+}
+
+void	free_all(char **tab)
+{
+	size_t	index;
+
+	index = 0;
+	while (tab[index] != NULL)
+		free(tab[index++]);
+	free(tab);
 }
 
 char	**ft_split(char const *s, char c)
@@ -105,7 +99,11 @@ char	**ft_split(char const *s, char c)
 	tab = malloc(sizeof(char *) * (words + 1));
 	if (!tab)
 		return (NULL);
+	tab[words] = NULL;
 	if (!allocate_tab(s, c, tab))
+	{
+		free_all(tab);
 		return (NULL);
+	}
 	return (tab);
 }

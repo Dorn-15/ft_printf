@@ -6,13 +6,13 @@
 /*   By: adoireau <adoireau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 16:09:11 by adoireau          #+#    #+#             */
-/*   Updated: 2024/10/09 12:34:21 by adoireau         ###   ########.fr       */
+/*   Updated: 2024/11/12 12:04:25 by adoireau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Trims characters from 'set' at the beginning and end of 's1'. */
+/* Trims characters from 'set' at the beginning and end of 's1' */
 size_t	ft_start_trim(char const *s1, char const *set)
 {
 	size_t	i;

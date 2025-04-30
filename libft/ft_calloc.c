@@ -6,19 +6,19 @@
 /*   By: adoireau <adoireau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 12:47:16 by adoireau          #+#    #+#             */
-/*   Updated: 2024/10/06 16:23:09 by adoireau         ###   ########.fr       */
+/*   Updated: 2024/11/12 11:51:28 by adoireau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* alloc memory & sets all bytes to zero. */
+/* alloc memory & sets all bytes to zero */
 void	*ft_calloc(size_t count, size_t size)
 {
 	size_t	total;
 	void	*mem;
 
-	if (size != 0 && count > ((size_t) -1 / size))
+	if (size != 0 && count > ((size_t) - 1 / size))
 		return (NULL);
 	total = count * size;
 	mem = malloc(total);

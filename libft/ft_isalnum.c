@@ -6,13 +6,13 @@
 /*   By: adoireau <adoireau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 15:04:02 by adoireau          #+#    #+#             */
-/*   Updated: 2024/10/06 16:23:05 by adoireau         ###   ########.fr       */
+/*   Updated: 2024/11/12 11:11:17 by adoireau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Checks if character c is alphanumeric. */
+/* Checks if character c is alphanumeric */
 int	ft_isalnum(int c)
 {
 	return ((c >= '0' && c <= '9')

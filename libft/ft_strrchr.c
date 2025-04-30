@@ -6,13 +6,13 @@
 /*   By: adoireau <adoireau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 13:43:44 by adoireau          #+#    #+#             */
-/*   Updated: 2024/10/06 16:21:47 by adoireau         ###   ########.fr       */
+/*   Updated: 2024/11/12 12:10:55 by adoireau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Finds last occurrence of c in string s. */
+/* Finds last occurrence of c in string s */
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;

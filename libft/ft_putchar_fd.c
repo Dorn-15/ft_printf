@@ -6,14 +6,15 @@
 /*   By: adoireau <adoireau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:08:03 by adoireau          #+#    #+#             */
-/*   Updated: 2024/10/09 15:28:55 by adoireau         ###   ########.fr       */
+/*   Updated: 2024/11/14 13:08:33 by adoireau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Outputs the character c to the file descriptor fd. */
+/* Outputs the character c to the file descriptor fd */
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	if (fd != -1)
+		write(fd, &c, 1);
 }

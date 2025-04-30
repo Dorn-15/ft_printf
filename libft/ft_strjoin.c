@@ -6,13 +6,13 @@
 /*   By: adoireau <adoireau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 15:57:12 by adoireau          #+#    #+#             */
-/*   Updated: 2024/10/09 12:47:33 by adoireau         ###   ########.fr       */
+/*   Updated: 2024/11/12 11:57:16 by adoireau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Allocates a new string, result of the concatenation of 's1' and 's2'. */
+/* Allocates a new string, result of the concatenation of 's1' and 's2' */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*s3;

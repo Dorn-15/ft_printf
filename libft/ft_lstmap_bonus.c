@@ -6,7 +6,7 @@
 /*   By: adoireau <adoireau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 19:40:26 by adoireau          #+#    #+#             */
-/*   Updated: 2024/10/28 11:54:05 by adoireau         ###   ########.fr       */
+/*   Updated: 2024/11/14 13:08:31 by adoireau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,13 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_list;
 	t_list	*node;
 
+	if (!lst)
+		return (NULL);
 	new_list = NULL;
 	while (lst)
 	{
 		node = ft_lstnew(f(lst->content));
-		if (!node)
+		if (node == NULL)
 		{
 			ft_lstclear(&new_list, del);
 			return (NULL);

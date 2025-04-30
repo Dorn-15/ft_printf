@@ -6,14 +6,14 @@
 /*   By: adoireau <adoireau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 21:09:47 by adoireau          #+#    #+#             */
-/*   Updated: 2024/10/10 17:49:13 by adoireau         ###   ########.fr       */
+/*   Updated: 2024/11/12 12:04:58 by adoireau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Converts an integer to a string. */
-int	int_len(int n)
+/* Converts an integer to a string */
+int	int_len(long n)
 {
 	int	len;
 
@@ -49,7 +49,7 @@ char	*ft_itoa(int n)
 	{
 		if (str[len] == '-')
 			break ;
-		str[len] = nb % 10 + '0';
+		str[len] = (nb % 10) + '0';
 		nb /= 10;
 	}
 	return (str);

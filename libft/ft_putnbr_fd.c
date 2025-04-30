@@ -6,13 +6,13 @@
 /*   By: adoireau <adoireau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:58:09 by adoireau          #+#    #+#             */
-/*   Updated: 2024/10/09 15:24:39 by adoireau         ###   ########.fr       */
+/*   Updated: 2024/11/12 12:14:59 by adoireau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Outputs the integer n to the file descriptor fd. */
+/* Outputs the integer n to the file descriptor fd */
 void	ft_print_nb(long nb, int fd)
 {
 	if (nb / 10)

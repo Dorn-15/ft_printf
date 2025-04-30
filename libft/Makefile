@@ -56,7 +56,7 @@ SRCALL = $(SRCS) $(BONUS)
 OBJS = $(SRCS:.c=.o)
 OBJSALL = $(SRCALL:.c=.o)
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror -I $(SRCS_DIR)
 
 AR = ar -rcs

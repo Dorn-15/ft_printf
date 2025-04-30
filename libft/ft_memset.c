@@ -6,13 +6,13 @@
 /*   By: adoireau <adoireau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:14:31 by adoireau          #+#    #+#             */
-/*   Updated: 2024/10/06 16:22:29 by adoireau         ###   ########.fr       */
+/*   Updated: 2024/11/12 11:13:21 by adoireau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Fills n bytes of memory at dest with byte value c. */
+/* Fills n bytes of memory at dest with byte value c */
 void	*ft_memset(void *dest, int c, size_t n)
 {
 	size_t			i;
@@ -21,9 +21,6 @@ void	*ft_memset(void *dest, int c, size_t n)
 	i = 0;
 	bytes = (unsigned char *)dest;
 	while (i < n)
-	{
-		bytes[i] = (unsigned char)c;
-		i++;
-	}
+		bytes[i++] = (unsigned char)c;
 	return (dest);
 }

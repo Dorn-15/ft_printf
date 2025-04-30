@@ -6,7 +6,7 @@
 /*   By: adoireau <adoireau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 12:32:11 by adoireau          #+#    #+#             */
-/*   Updated: 2024/10/23 14:09:17 by adoireau         ###   ########.fr       */
+/*   Updated: 2024/11/19 14:47:31 by adoireau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,8 @@ int	ft_printf(const char *format, ...)
 	va_list	args;
 	int		result;
 
+	if (!format)
+		return (-1);
 	va_start(args, format);
 	result = process_format(format, args);
 	va_end(args);

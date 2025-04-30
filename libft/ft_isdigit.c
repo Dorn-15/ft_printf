@@ -6,13 +6,13 @@
 /*   By: adoireau <adoireau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 15:03:23 by adoireau          #+#    #+#             */
-/*   Updated: 2024/10/06 16:22:52 by adoireau         ###   ########.fr       */
+/*   Updated: 2024/11/12 11:11:13 by adoireau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Checks if character c is a decimal digit. */
+/* Checks if character c is a decimal digit */
 int	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');

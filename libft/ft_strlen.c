@@ -6,13 +6,13 @@
 /*   By: adoireau <adoireau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 15:07:09 by adoireau          #+#    #+#             */
-/*   Updated: 2024/10/09 12:47:49 by adoireau         ###   ########.fr       */
+/*   Updated: 2024/11/12 11:10:42 by adoireau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Returns the length of the string 's'. */
+/* Returns the length of the string 's' */
 size_t	ft_strlen(const char *s)
 {
 	size_t	i;

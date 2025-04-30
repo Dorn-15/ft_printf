@@ -6,13 +6,13 @@
 /*   By: adoireau <adoireau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 17:03:58 by adoireau          #+#    #+#             */
-/*   Updated: 2024/10/07 23:16:55 by adoireau         ###   ########.fr       */
+/*   Updated: 2024/11/12 11:29:14 by adoireau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Searches for substring srch in ref within n characters. */
+/* Searches for substring srch in ref within n characters */
 char	*ft_strnstr(const char *ref, const char *srch, size_t n)
 {
 	size_t	i;
